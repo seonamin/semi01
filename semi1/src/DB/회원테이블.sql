@@ -1,11 +1,11 @@
 create table users(
 users_idx NUMBER(20) primary key,
 users_id VARCHAR2(20) not null check(regexp_like(users_id, '^[a-z][a-z0-9-_]{4,19}$')),
-users_pw VARCHAR2(20) not null check(regexp_like(users_pw, '^[a-zA-Z0-9-_!@#$]{8,20}$')),
+users_pw VARCHAR2(20) not null check(regexp_like(users_pw, '^[a-zA-Z0-9-_!@#$]{6,20}$')),
 users_nick VARCHAR2(30) not null,
 users_email VARCHAR2(30),
 users_phone char(13) check(regexp_like(users_phone, '^010-[0-9]{4}-[0-9]{4}$')),
-users_grade VARCHAR2(12) default '일반회원' check(users_grade in ('일반회원', '관리자'))
+users_grade VARCHAR2(12) default '일반회원' check(users_grade in ('일반회원', '서포터즈','관리자'))
 );
 
 -- 시퀀스? 협의 필요

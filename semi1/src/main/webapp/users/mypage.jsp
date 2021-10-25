@@ -21,7 +21,7 @@ UsersDto usersDto = usersDao.get(keep);
 
  <h2> 마이페이지 </h2>
     
-    <table width="350">
+    <table width="350" align="center">
     	<tbody>
     		<tr>
     			<th>아이디</th>
@@ -44,12 +44,21 @@ UsersDto usersDto = usersDao.get(keep);
     			<td><%=usersDto.getUsersGrade() %></td>
     		</tr>
     	</tbody>
+    	<tfoot align="right">
+    		<tr>
+    			<td><a href="modifyPassword.jsp"><input type="button" value="비밀번호변경"></a></td>
+    		</tr>
+    		<tr>
+    			<td><a href="modify.jsp"><input type="button" value="회원정보변경"></a></td>
+    		</tr>
+    		<tr>
+    			<td><a href="unregister.jsp"><input type="button" value="회원탈퇴"></a></td>
+    		</tr>
+    	</tfoot>
     </table>
-    
-    <h3><a href="pw.jsp">비밀번호변경</a></h3>
-    <h3><a href="edit.jsp">회원정보변경</a></h3>
-    <h3><a href="quit.jsp">회원탈퇴</a></h3>
 
+   
+	
 <!-- 페이지 내용 끝. -->
 <jsp:include page="/template/footer.jsp"></jsp:include>
 

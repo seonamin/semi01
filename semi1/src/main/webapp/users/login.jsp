@@ -15,9 +15,9 @@ boolean isLogin = keep != null;
 <!-- 로그인 -->
 		<h3>LOGIN</h3>
 	<%-- table전체를 감싸도록 form을 작성 --%>
-	<%--	<form action="<%=request.getContextPath()%>/member/login.kh" method="post"> --%>
+	<%--	<form action="<%=request.getContextPath()%>/users/login.nogari" method="post"> --%>
 	<form action="<%=root %>/users/login.nogari" method="post"> 
-	<table>
+	<table align="center">
 		<tbody>
 			<tr>
 				<th>ID</th>

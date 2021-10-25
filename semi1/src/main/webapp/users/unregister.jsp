@@ -12,8 +12,8 @@ String grade = (String)session.getAttribute("grade");
 %>
 <!-- 페이지 내용 시작 -->
 <h4>회원탈퇴를 위해 비밀번호를 확인합니다</h4>
-	<form action="quit.nogari" method="post">
-		<table>
+	<form action="unregister.nogari" method="post">
+		<table align="center">
 			<tbody>
 				<tr>
 					<th>아이디</th>

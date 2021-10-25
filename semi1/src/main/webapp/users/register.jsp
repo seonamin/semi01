@@ -12,7 +12,7 @@
 <h3>회원가입페이지</h3>
 
 <form action="<%=root %>/users/join.nogari" method="post">
-	<table>
+	<table align="center">
 		<tbody>
 			<tr>
 				<td>아이디</td>
