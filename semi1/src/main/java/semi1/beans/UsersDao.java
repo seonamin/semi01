@@ -14,6 +14,7 @@ public class UsersDao {
 	
 	public static final String USERNAME="hexa";
 	public static final String PASSWORD="hexa";
+	
 	//회원가입시 아이디 중복검사
 		public boolean checkId(String usersId) throws Exception{
 			Connection con = JdbcUtils.connect(USERNAME, PASSWORD);
@@ -96,7 +97,7 @@ public class UsersDao {
 		public boolean updatePw(UsersDto usersDto, String pwUpdate) throws Exception{
 			Connection con = JdbcUtils.connect(USERNAME, PASSWORD);
 
-			String sql = "update users set users_pw=? where users_id and users_pw=?";
+			String sql = "update users set users_pw=? where users_id=? and users_pw=?";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, pwUpdate);					//변경할 비번
 			ps.setString(2, usersDto.getUsersPw());	//현재 비번
